@@ -62,10 +62,10 @@ const SERVICES = [
 
 /* ---------- Branches (all details are made up) ---------- */
 const BRANCHES = [
-  { id: 'gulberg', name: 'Gulberg', address: 'Shop 12, Main Boulevard Plaza, Gulberg III, Lahore', hours: 'Every day, 10:00 AM – 10:00 PM', phone: SITE.phone, phoneLink: SITE.phoneLink, map: 'Main Boulevard Gulberg III Lahore' },
-  { id: 'dha', name: 'DHA', address: 'Plot 45, Phase 5 Commercial Area, DHA, Lahore', hours: 'Every day, 10:00 AM – 11:00 PM', phone: SITE.phone, phoneLink: SITE.phoneLink, map: 'Phase 5 DHA Lahore' },
-  { id: 'johar', name: 'Johar Town', address: 'Shop 7, Block R1 Market, Johar Town, Lahore', hours: 'Every day, 10:00 AM – 10:00 PM', phone: SITE.phone, phoneLink: SITE.phoneLink, map: 'Johar Town Lahore' },
-  { id: 'model', name: 'Model Town', address: 'Shop 3, Link Road Market, Model Town, Lahore', hours: 'Every day, 11:00 AM – 10:00 PM', phone: SITE.phone, phoneLink: SITE.phoneLink, map: 'Link Road Model Town Lahore' }
+  { id: 'gulberg', name: 'Gulberg', address: 'Shop 12, Main Boulevard Plaza, Gulberg III, Lahore', hours: 'Every day, 10:00 AM – 10:00 PM', phone: SITE.phone, phoneLink: SITE.phoneLink, map: 'Gulberg III, Lahore' },
+  { id: 'dha', name: 'DHA', address: 'Plot 45, Phase 5 Commercial Area, DHA, Lahore', hours: 'Every day, 10:00 AM – 11:00 PM', phone: SITE.phone, phoneLink: SITE.phoneLink, map: 'DHA Phase 5, Lahore' },
+  { id: 'johar', name: 'Johar Town', address: 'Shop 7, Block R1 Market, Johar Town, Lahore', hours: 'Every day, 10:00 AM – 10:00 PM', phone: SITE.phone, phoneLink: SITE.phoneLink, map: 'Johar Town, Lahore' },
+  { id: 'model', name: 'Model Town', address: 'Shop 3, Link Road Market, Model Town, Lahore', hours: 'Every day, 11:00 AM – 10:00 PM', phone: SITE.phone, phoneLink: SITE.phoneLink, map: 'Model Town, Lahore' }
 ];
 
 /* ---------- Quiz: styles and how answers add points ---------- */

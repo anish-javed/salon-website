@@ -31,17 +31,32 @@
     errorEl.textContent = '';
   });
 
-  /* ----- Step 2: services (grouped by category) ----- */
+  /* ----- Step 2: services (tabs, same as the Services page) ----- */
   var svcBox = document.getElementById('serviceChoices');
-  svcBox.innerHTML = CATEGORIES.map(function (c) {
-    return '<div class="group-title">' + c.label + '</div><div class="service-list">' +
-      SERVICES.filter(function (s) { return s.cat === c.id; }).map(function (s) {
-        return '<label class="service-row"><input type="checkbox" value="' + s.id + '">' +
-          '<span class="info"><strong>' + s.name + '</strong><small>' + s.desc + '</small></span>' +
-          '<span class="price">' + rupees(s.price) + '</span></label>';
-      }).join('') + '</div>';
-  }).join('');
-  svcBox.addEventListener('change', function (e) {
+  svcBox.innerHTML = '<div class="tabs" role="tablist" aria-label="Service categories">' +
+    CATEGORIES.map(function (c) {
+      return '<button type="button" class="tab" role="tab" data-cat="' + c.id + '" aria-selected="false">' + c.label + '</button>';
+    }).join('') + '</div><div class="service-list" role="tabpanel"></div>';
+  var svcTabs = svcBox.querySelector('.tabs');
+  var svcList = svcBox.querySelector('.service-list');
+
+  function showSvcTab(cat) {
+    svcTabs.querySelectorAll('.tab').forEach(function (t) {
+      t.setAttribute('aria-selected', t.getAttribute('data-cat') === cat);
+    });
+    // ticks come from booking.services, so they stay when you switch tabs
+    svcList.innerHTML = SERVICES.filter(function (s) { return s.cat === cat; }).map(function (s) {
+      var on = booking.services.indexOf(s.id) > -1;
+      return '<label class="service-row' + (on ? ' checked' : '') + '"><input type="checkbox" value="' + s.id + '"' + (on ? ' checked' : '') + '>' +
+        '<span class="info"><strong>' + s.name + '</strong><small>' + s.desc + '</small></span>' +
+        '<span class="price">' + rupees(s.price) + '</span></label>';
+    }).join('');
+  }
+  svcTabs.addEventListener('click', function (e) {
+    var t = e.target.closest('.tab');
+    if (t) showSvcTab(t.getAttribute('data-cat'));
+  });
+  svcList.addEventListener('change', function (e) {
     var id = e.target.value, i = booking.services.indexOf(id);
     if (e.target.checked && i < 0) booking.services.push(id);
     if (!e.target.checked && i > -1) booking.services.splice(i, 1);
@@ -78,7 +93,7 @@
   function drawSlots() {
     var isToday = dateInput.value === todayStr;
     var html = '';
-    for (var h = 11; h <= 21; h++) {
+    for (var h = 10; h <= 21; h++) {
       [0, 30].forEach(function (m) {
         var past = isToday && (h * 60 + m) <= (new Date().getHours() * 60 + new Date().getMinutes());
         var label = slotLabel(h, m);
@@ -191,9 +206,10 @@
     branchBox.querySelector('[data-id="' + pb + '"]').classList.add('selected');
   }
   (params.get('services') || '').split(',').forEach(function (id) {
-    var box = svcBox.querySelector('input[value="' + id + '"]');
-    if (box && findService(id)) { box.checked = true; box.closest('.service-row').classList.add('checked'); booking.services.push(id); }
+    if (findService(id) && booking.services.indexOf(id) < 0) booking.services.push(id);
   });
+  // open the tab of the first pre-chosen service, otherwise Hair
+  showSvcTab(booking.services.length ? findService(booking.services[0]).cat : 'hair');
   updateMini();
   show(booking.branch ? (booking.services.length ? 2 : 1) : 0);
   started = true;

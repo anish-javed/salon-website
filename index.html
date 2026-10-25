@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Clipper – Men's Salon in Lahore</title>
+  <meta name="description" content="Clipper men's salon, Lahore. Haircuts, beard and skin care since 2005. 4 branches. Book online and get 10% off.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="home">
+  <div id="site-header"></div>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="reveal">
+          <span class="eyebrow">Men's Salon · Lahore · Since 2005</span>
+          <h1>Look sharp. <span class="gold">Feel sharper.</span></h1>
+          <p class="lead">Every hair and skin treatment a man needs, from a clean fade to a gold facial, at 4 branches across Lahore.</p>
+          <div class="btn-row">
+            <a class="btn" href="book.html">Book Online – 10% OFF</a>
+            <a class="btn ghost" href="services.html">See Prices</a>
+          </div>
+          <div class="trust">
+            <span data-icon="award"> 20+ years</span>
+            <span data-icon="shield"> Hygienic tools</span>
+            <span data-icon="star"> Expert barbers</span>
+          </div>
+        </div>
+        <div class="hero-art reveal d2">
+          <!-- PHOTO SPOT (optional): replace this drawing with a real photo, e.g. <img src="images/hero.jpg" alt="Barber at work"> -->
+          <svg viewBox="0 0 400 400" role="img" aria-label="Gold scissors and comb illustration">
+            <circle cx="200" cy="200" r="170" fill="#1a1a1c" stroke="#c9a24b" stroke-width="3"/>
+            <circle cx="200" cy="200" r="148" fill="none" stroke="#c9a24b" stroke-width="1" stroke-dasharray="4 8"/>
+            <g stroke="#c9a24b" stroke-width="10" stroke-linecap="round" fill="none">
+              <circle cx="140" cy="290" r="26"/>
+              <circle cx="260" cy="290" r="26"/>
+              <path d="M155 268 L250 110 M245 268 L150 110"/>
+            </g>
+            <g fill="#e4c77d"><path d="M250 110 L262 96 L256 124z"/><path d="M150 110 L138 96 L144 124z"/></g>
+            <circle cx="200" cy="190" r="9" fill="#0b0b0b" stroke="#c9a24b" stroke-width="4"/>
+            <rect x="120" y="318" width="160" height="26" rx="6" fill="#252528" stroke="#c9a24b" stroke-width="3"/>
+            <g stroke="#c9a24b" stroke-width="3" stroke-linecap="round"><path d="M134 344v18M150 344v18M166 344v18M182 344v18M198 344v18M214 344v18M230 344v18M246 344v18M262 344v18"/></g>
+            <g fill="#c9a24b"><path d="M70 120l5 12 12 5-12 5-5 12-5-12-12-5 12-5z"/><path d="M330 90l4 9 9 4-9 4-4 9-4-9-9-4 9-4z"/></g>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="section alt" style="padding:40px 0">
+      <div class="container stats">
+        <div class="stat reveal"><b data-count="2005" data-suffix="">0</b><span>Serving Lahore since</span></div>
+        <div class="stat reveal d1"><b data-count="4">0</b><span>Branches in Lahore</span></div>
+        <div class="stat reveal d2"><b data-count="30" data-suffix="+">0</b><span>Hair, beard &amp; skin services</span></div>
+        <div class="stat reveal d3"><b data-count="10" data-suffix="%">0</b><span>Off when you book online</span></div>
+      </div>
+    </section>
+
+    <!-- POPULAR SERVICES -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal"><span class="eyebrow">Popular</span><h2>Our most loved services</h2>
+          <p>Prices in PKR. Book online and take 10% off with code <span class="code-chip">WEB10</span>.</p></div>
+        <div class="grid cols-4" id="popular"></div>
+        <p style="text-align:center;margin-top:28px" class="reveal"><a class="btn ghost" href="services.html">See all services &amp; use the price calculator</a></p>
+      </div>
+    </section>
+
+    <!-- QUIZ -->
+    <section class="section alt">
+      <div class="container">
+        <div class="section-head reveal"><span class="eyebrow">Not sure what to get?</span><h2>Find your style</h2>
+          <p>Answer 3 quick questions and we will suggest your best haircut.</p></div>
+        <div class="quiz reveal" id="quiz" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- WHY US + PHOTO SPOTS -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal"><span class="eyebrow">Why Clipper</span><h2>Grooming done properly</h2></div>
+        <div class="grid cols-3">
+          <div class="card reveal"><div class="big-icon" data-icon="scissors"></div><h3>Skilled barbers</h3><p class="muted">Trained stylists who listen first, then cut.</p></div>
+          <div class="card reveal d1"><div class="big-icon" data-icon="shield"></div><h3>Clean &amp; hygienic</h3><p class="muted">Sterilised tools and fresh towels for every customer.</p></div>
+          <div class="card reveal d2"><div class="big-icon" data-icon="sparkle"></div><h3>Hair &amp; skin care</h3><p class="muted">From fades to facials, everything under one roof.</p></div>
+        </div>
+        <div class="grid cols-3" style="margin-top:20px">
+          <!-- PHOTO SPOT: replace each box below with <img src="images/your-photo.jpg" alt="description"> -->
+          <div class="photo-slot reveal" data-icon="camera"><strong>PHOTO HERE</strong><small>Salon interior</small></div>
+          <div class="photo-slot reveal d1" data-icon="camera"><strong>PHOTO HERE</strong><small>Barber at work</small></div>
+          <div class="photo-slot reveal d2" data-icon="camera"><strong>PHOTO HERE</strong><small>Happy customer</small></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOYALTY -->
+    <section class="section alt">
+      <div class="container">
+        <div class="loyalty reveal">
+          <div>
+            <span class="eyebrow">Loyalty rewards</span>
+            <h2>Every 6th haircut is <span class="gold">FREE</span></h2>
+            <p class="muted">Get a stamp with every haircut at any Clipper branch. Collect 5 stamps and your 6th haircut is on us. Bring your friends too!</p>
+            <div class="btn-row">
+              <button type="button" class="btn green" data-refer data-icon="share"> Refer a friend</button>
+              <a class="btn ghost" href="about.html#loyalty">How it works</a>
+            </div>
+          </div>
+          <div class="stamps" aria-label="Loyalty card: 5 stamps then a free haircut">
+            <div class="stamp" data-icon="scissors"></div><div class="stamp" data-icon="scissors"></div><div class="stamp" data-icon="scissors"></div>
+            <div class="stamp" data-icon="scissors"></div><div class="stamp" data-icon="scissors"></div><div class="stamp free">6th<br>FREE</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BRANCHES -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal"><span class="eyebrow">Find us</span><h2>4 branches in Lahore</h2><p>Gulberg, DHA, Johar Town and Model Town. Pick the one closest to you.</p></div>
+        <div class="grid cols-4" id="branchTeaser"></div>
+      </div>
+    </section>
+
+    <!-- FINAL CALL TO ACTION -->
+    <section class="section" style="padding-top:0">
+      <div class="container">
+        <div class="cta reveal">
+          <h2>Ready for a fresh look?</h2>
+          <p class="muted">Book in under a minute and use code <span class="code-chip">WEB10</span> for 10% off.</p>
+          <div class="btn-row"><a class="btn" href="book.html">Book Now</a><a class="btn ghost" href="tel:+923000000000">Call 0300 0000000</a></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="js/data.js"></script>
+  <script src="js/services.js"></script>
+  <script src="js/quiz.js"></script>
+  <script src="js/branches.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

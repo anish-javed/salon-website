@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Book Online – Clipper Men's Salon Lahore</title>
+  <meta name="description" content="Book your Clipper appointment in 4 easy steps and get 10% off with code WEB10.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="book">
+  <div id="site-header"></div>
+
+  <main>
+    <section class="page-hero">
+      <div class="container reveal">
+        <span class="eyebrow">Book Online</span>
+        <h1>Book in 4 easy steps</h1>
+        <p>Use code <span class="code-chip">WEB10</span> for 10% off. It is added to your message automatically.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="booking" id="booking">
+          <div class="progress" aria-label="Progress">
+            <div class="progress-fill" id="progressFill"></div>
+            <div class="dot"><i>1</i>Branch</div>
+            <div class="dot"><i>2</i>Services</div>
+            <div class="dot"><i>3</i>Date &amp; time</div>
+            <div class="dot"><i>4</i>Your name</div>
+          </div>
+
+          <div class="step">
+            <h2>Choose your branch</h2>
+            <div class="choice-grid" id="branchChoices"></div>
+          </div>
+
+          <div class="step">
+            <h2>Choose your services</h2>
+            <div id="serviceChoices"></div>
+            <div class="mini-total" id="miniTotal"></div>
+          </div>
+
+          <div class="step">
+            <h2>Pick a date and time</h2>
+            <label class="field" for="bookDate">Date</label>
+            <input type="date" id="bookDate">
+            <label class="field">Time</label>
+            <div class="slots" id="slots"></div>
+          </div>
+
+          <div class="step">
+            <h2>Almost done!</h2>
+            <label class="field" for="bookName">Your name</label>
+            <input type="text" id="bookName" autocomplete="name" placeholder="e.g. Ahmed Khan">
+          </div>
+
+          <div id="summaryBox" hidden>
+            <div class="summary" id="summary"></div>
+            <p class="muted" style="font-size:.9rem;margin-top:10px">Tap the button below. WhatsApp opens with your booking message ready; just press Send. Our team will confirm your slot.</p>
+          </div>
+
+          <div class="error" id="bookError" role="alert"></div>
+          <div class="step-nav">
+            <button type="button" class="btn ghost" id="backBtn">Back</button>
+            <button type="button" class="btn" id="nextBtn">Next</button>
+          </div>
+          <p id="doneNote" hidden class="muted" style="text-align:center;margin-top:18px">WhatsApp did not open? <a id="waFallback" href="#" target="_blank" rel="noopener">Tap here to send your booking</a>.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="js/data.js"></script>
+  <script src="js/booking.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
